@@ -1,0 +1,173 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    max-height: 100%;
+}
+body{
+    font-size: tahoma;
+    font-size: 18px;
+    background-image: url(../img/incap\ se\ invencible2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* seccion <header> */
+#header{
+    background-color: lightblue;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;/*direccion horizontal o en fila*/
+    justify-content: center;/*alinea horizontalmente*/
+    align-items: center;/*alinear horizontal*/
+    grid-area: header;/*nombre contenedor css grid*/
+}
+ul{
+    padding: 0;
+    margin: 0 3px;
+}
+li{
+    list-style: none;/*quitar viñetas*/
+    margin: 0 5px;
+    font: bold 12px verdana;
+}
+a{
+    color: black;
+    text-decoration: none;/*quitar subrayado*/
+}
+#menu{
+    grid-area: nav;/*nombre contenedor css grid*/
+    background-color: lightblue;
+    border: 2px solid black;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+}
+/* seccion estilos submenu */
+.menuB>li{
+    position: relative;
+    display: inline-block;
+}
+.menuB>li >a {
+    display: block;
+    padding: 15px 20px;
+    color: lightskyblue;
+    text-decoration: none;
+}
+.menuB li a:hover{
+    color: aquamarine;
+    transition: all .3s;
+}
+/* evento cssal pasar mouse encima menu */
+.submenu{
+    position: absolute;
+    background: lightgrey;
+    width: 120%;
+    display: none;/*se mantenga oculto*/
+}
+.submenu li a{
+    display: block;
+    padding: 15px;
+    color: antiquewhite;
+    text-decoration: none;
+}
+.menuB li:hover .submenu{/*evento de mostrar submenu al pasar mouse*/
+display: block;
+z-index: 100;/*capa superior en pagina web*/
+}
+/* seccion estilos buscarbox */
+.buscarbox input{
+    height: 25px;
+    width: 0px;
+    padding: 0px 0px;
+    border-radius: 40px;
+    border: 0px;
+    padding-right: 50px;
+    transition: 0.8s;
+}
+.buscarbox input:hover{/*evento de ampliar ancho al pasar mouse*/
+    width: 150px;
+    padding-left: 10px;
+    outline: none;
+}
+/* seccion de contenido <section> y <article> */
+#main{
+    grid-area: main;/*nombre contenedor css grid*/
+    border: 2px solid lightblue;
+    border-radius: 22px;
+    max-width: 100%;/*adaptable a cualquier dispositivo*/
+    height: auto;/*adaptable a cualquier dispositivo*/
+    background-color: rgba(255,255,255,0.6);/*efecto glass*/
+    backdrop-filter: blur(5px);/*efecto glass*/
+}
+figure{
+    display: inline;
+    margin: 45px;
+    padding: 5px;
+}
+/* seccion estilos<article>iconos escuelas incap*/
+.programa{
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    width: 45%;
+    height: 200px;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+section article{
+    background-color: azure;
+    backdrop-filter: blur(5px);
+    margin: 20px;
+}
+/* seccion estilos <aside> barra lateral*/
+#sidebar{
+    grid-area: sidebar;/*nombre contenedor css grid*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 22px;
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(5px);
+}
+iframe{
+    max-width: 100;/*adaptable a cualquier dispositivo*/
+    height: auto;/*adaptable a cualquier dspositivo*/
+}
+/* seccion estilos <footer> */
+#footer{
+    grid-area: footer;/*nombre contenedor para css grid*/
+    padding-top: 20px;
+    border: 2px solid lightskyblue;
+    border-radius: 22px;
+    clear: both;/*eliminar flotamientos css grid*/
+    background-color: rgba(255,255,255,0.6);
+    backdrop-filter: blur(20px);
+}
+#redes a{
+    padding: 5px;
+    margin: 0px;
+}
+#redes a i:hover{
+    transform: scale(1.5);/*agrandar icono al evento de pasar mouse encima*/
+}
+/* estilos a iconos fontawesome redes sociales */
+i[class^="fa"]{
+    color: gray;
+    font-size: 18px;
+}
+i[class^="fab"]{
+    color: gray;
+    font-size: 30px;
+    border: 1px solid transparent;
+    margin: 0px;
+}
